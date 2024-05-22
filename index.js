@@ -13,11 +13,11 @@ function logActivity(msg) {
   const chat = msg.chat;
   const command = msg.text.toLowerCase();
 
-  console.log(`Aktivitas Penggunaan Bot Telegram`);
+  console.log(`Telegram Bot Usage Activities by IPxKINGYT`);
   console.log(`• User ID: ${user.id}`);
   console.log(`• Username: ${user.username || 'Tidak ada'}`);
   console.log(`• Chat ID: ${chat.id}`);
-  console.log(`• Perintah: ${command}`);
+  console.log(`• Commands: ${command}`);
 }
 
 // Event listener untuk pesan dari pengguna
@@ -29,7 +29,7 @@ bot.on('message', (msg) => {
   logActivity(msg);
 
   // Menanggapi perintah /mix
-  if (command.startsWith('/mix')) {
+  if (command.startsWith('/bgmi')) {
     // Mengekstrak argumen dari pesan
     const args = command.split(' ');
     const url = args[1];
@@ -53,11 +53,11 @@ bot.on('message', (msg) => {
         }
         // Menampilkan output stdout jika berhasil
         console.log(`stdout: ${stdout}`);
-        bot.sendMessage(chatId, 'Proses telah dimulai.');
+        bot.sendMessage(chatId, 'PROCESS STARTED THANKS FOR BUY DM @IPxKINGYT.');
       });
     } else {
       // Memberi tahu pengguna bahwa format pesan tidak benar
-      bot.sendMessage(chatId, 'Format pesan tidak benar. Gunakan format: /mix [url] [time] [thread] [rate]');
+      bot.sendMessage(chatId, 'ABBEY NALLE AISE DAAL: /bgmi [url] [time] [thread] [rate]');
     }
   }
 });
